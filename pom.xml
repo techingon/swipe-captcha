@@ -10,43 +10,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
 		<slf4j.version>1.7.21</slf4j.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.maven-play-plugin.org.playframework</groupId>
-			<artifactId>play</artifactId>
-			<version>1.2.7</version>
-			<exclusions>
-				<exclusion>
-					<groupId>*</groupId>
-					<artifactId>*</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.maven-play-plugin.org.playframework</groupId>
-			<artifactId>jj-simplecaptcha</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.maven-play-plugin.org.playframework</groupId>
-			<artifactId>jj-imaging</artifactId>
-			<version>1.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
 		<!-- 日志依赖包 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
