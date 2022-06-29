@@ -9,4 +9,26 @@
 * 前端实现滑动交互，将抠图拼在抠图阴影之上，获取到用户滑动距离值，比如上述示例
 * 前端将用户滑动距离值传入后端，后端校验误差是否在容许范围内。
 
+使用方法如下：
+```
+    public static void main(String[] args) throws InterruptedException {
+        log.info("Go");
+        SwipeCaptchaService scs = new SwipeCaptchaServiceImpl();
+
+        String channel = "user-login";
+        String uid = "u123456";
+        UserCaptcha uc = scs.getCaptcha(channel, uid, System.currentTimeMillis());
+
+//        Thread.sleep(1000);
+        Thread.sleep(6000);
+        CaptchaResult cr = scs.verifyCaptcha(channel, uid, uc.getUuid(), "200");
+
+        log.info("验证结果,code:{},msg:{}",cr.getCode(),cr.getMsg());
+
+        cr = scs.verifyCaptcha(channel, uid, uc.getUuid(), "200");
+
+        log.info("重复验证结果,code:{},msg:{}",cr.getCode(),cr.getMsg());
+   }
+```
+
 更多介绍请关注：https://blog.csdn.net/feng_zi0yhv
